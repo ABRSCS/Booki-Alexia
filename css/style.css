@@ -18,8 +18,13 @@ body {
     justify-content: center;
     flex-direction: column;
     min-width: 320px;
+    margin-top:0px;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+}
 
 .main-container {
     width: 100%;
@@ -63,7 +68,7 @@ a {
 }
 
 header {
-    color: black; 
+    color: black;
     width: 100%;
     height: 79px;
 }
@@ -71,57 +76,59 @@ header {
 nav {
     display: flex;
     flex-direction: row;
-    align-content: left;
+    align-content: start;
     justify-content: space-between;
-    padding: 0;
-    font-size: small;
-  }
-
-  .p {
+    gap: 30px;
     font-size: 16px;
-  }
+}
 
-  html {
+.p {
+    font-size: 16px;
+}
+
+html {
     scroll-behavior: smooth;
 }
 
-  .logo {
+.logo {
     width: 61.09px;
     height: 19px;
     gap: 0px;
-    opacity: 0px;
     padding: 30% 0;
-  }
+}
 
-  .accueil-entete {
+.header-nav {
     font-size: 16px;
     font-weight: 400;
     line-height: 18.78px;
     text-align: center;
     display: flex;
     gap: 68px;
-  }
+}
 
-  .Buttonheader {
+.Buttonheader {
     border: none;
     border-top: 3px solid transparent;
-    display:grid;
+    display: grid;
     align-items: end;
     height: 35px;
     padding-right: 0;
     text-align: right;
-  }
+}
 
-  .Buttonheader:hover {
-    border-top: 3px solid #0065FC;
+.Buttonheader:hover {
+    border-top: 2px solid #0065FC;
     color: #0065FC;
 }
 
 .Buttonheader[href*="Hébergements"] {
-    width: 113px; /* Ajustez cette valeur pour correspondre à la largeur du mot "Activités" */
+    width: 113px;
+    /* Ajustez cette valeur pour correspondre à la largeur du mot "Activités" */
 }
+
 .Buttonheader[href*="Activités"] {
-    width: 63px; /* Ajustez cette valeur pour correspondre à la largeur du mot "Activités" */
+    width: 63px;
+    /* Ajustez cette valeur pour correspondre à la largeur du mot "Activités" */
 }
 
 .debutdepage {
@@ -129,10 +136,11 @@ nav {
     flex-direction: column;
     gap: 35px;
     justify-content: space-between;
+    margin-bottom: 35px;
 }
 
 .titre {
-    height: 53;
+    height: 53px;
 }
 
 .h1 {
@@ -140,13 +148,12 @@ nav {
 }
 
 .search-container {
-    width: Fixed (377px);
-    height: Fixed (49px);
-    border-radius: 15px 0px 0px 15px;
-    border: 1px;
-    display:flex;
+    width: 377px;
+    height: 49px;
+    display: flex;
     flex-direction: row;
-    row-gap: 10px;
+    align-items: center;
+    margin-top: 30px;
 }
 
 input::placeholder {
@@ -157,9 +164,9 @@ input::placeholder {
 
 .icon {
     width: 50px;
-    height: 53px;
+    height: 49px;
     background-color: #F2F2F2;
-    border-radius: 15px 0px 0px 15px;
+    border-radius: 15px 0 0 15px;
     gap: 15px;
     display: flex;
     justify-content: center;
@@ -171,22 +178,23 @@ input::placeholder {
 }
 
 .search-bar {
+    height: 45px; /* 49px - 2px de bordure */
     border-top: 1px solid #F2F2F2;
-    Border-bottom: 1px solid #F2F2F2;
+    border-bottom: 1px solid #F2F2F2;
     border-left: none;
     border-right: none;
     font-weight: bold;
     text-align: center;
-    height: 49px;
+    flex-grow: 1; /* Pour que la barre de recherche prenne l'espace disponible */
 }
 
 .boutonrecherche {
+    height: 49px;
     background-color: #0065FC;
     color: white;
-    border-radius: 0px 25px 25px 0px;
-    border-color: #0065FC;
-    border-style: none;
-    padding: 15px;
+    border-radius: 0px 15px 15px 0px;
+    border: none;
+    padding: 0 15px;
     font-size: 18px;
 }
 
@@ -200,7 +208,8 @@ input::placeholder {
 .filtres-label {
     font-size: 18px;
     font-weight: bold;
-    margin-right: 15px; /* Espace entre le label et les boutons */
+    margin-right: 15px;
+    /* Espace entre le label et les boutons */
 }
 
 .boutons-filtres {
@@ -223,7 +232,8 @@ input::placeholder {
 }
 
 .bouton-filtres i {
-    margin-right: 10px; /* Espace entre l'icône et le texte */
+    margin-right: 10px;
+    /* Espace entre l'icône et le texte */
     width: 22px;
 }
 
@@ -233,17 +243,21 @@ input::placeholder {
 
 .note-info {
     display: flex;
-    align-items: center; /* Centre verticalement l'icône et le texte */
-    gap: 10px; /* Espace entre l'icône et le texte */
+    align-items: center;
+    /* Centre verticalement l'icône et le texte */
+    gap: 10px;
+    /* Espace entre l'icône et le texte */
 }
 
 .info {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 1.38em; /* Largeur et hauteur du cercle */
+    width: 1.38em;
+    /* Largeur et hauteur du cercle */
     height: 1.38em;
-    border-radius: 50%; /* Crée un cercle */
+    border-radius: 50%;
+    /* Crée un cercle */
     border: 1px solid #D9D9D9;
 }
 
@@ -252,41 +266,56 @@ input::placeholder {
 }
 
 .footer {
-    background-color: #F2F2F2; /* Couleur de fond */
-    color: black; /* Couleur du texte */
-    padding: 20px 0; /* Espacement intérieur */
+    background-color: #F2F2F2;
+    /* Couleur de fond */
+    color: black;
+    /* Couleur du texte */
+    padding: 20px 0;
+    /* Espacement intérieur */
     margin: 20px 30px;
 }
 
 .footer-container {
-    display: flex; /* Utilisation de Flexbox pour aligner les sections */
-    justify-content: space-around; /* Espacement entre les sections */
-    max-width: 1200px; /* Largeur maximale */
-    margin:  left; /* Centrer le footer */
+    display: flex;
+    /* Utilisation de Flexbox pour aligner les sections */
+    justify-content: space-around;
+    /* Espacement entre les sections */
+    max-width: 1200px;
+    /* Largeur maximale */
+    margin-left:0;
+    /* Centrer le footer */
 }
 
 .footer-section {
-    flex: 1; /* Chaque section prend une part égale de l'espace */
-    margin: 0 20px; /* Espacement entre les sections */
+    flex: 1;
+    /* Chaque section prend une part égale de l'espace */
+    margin: 0 20px;
+    /* Espacement entre les sections */
 }
 
 .footer-section h3 {
-    margin-bottom: 10px; /* Espacement sous le titre */
+    margin-bottom: 10px;
+    /* Espacement sous le titre */
     font-size: 18px;
 }
 
 .footer-section ul {
-    list-style-type: none; /* Supprime les puces */
-    padding: 0; /* Supprime le padding */
+    list-style-type: none;
+    /* Supprime les puces */
+    padding: 0;
+    /* Supprime le padding */
 }
 
 .footer-section ul li {
-    margin: 5px 0; /* Espacement entre les éléments de la liste */
+    margin: 5px 0;
+    /* Espacement entre les éléments de la liste */
 }
 
 .footer-section a {
-    color: black; /* Couleur des liens */
-    text-decoration: none; /* Supprime le soulignement */
+    color: black;
+    /* Couleur des liens */
+    text-decoration: none;
+    /* Supprime le soulignement */
 }
 
 
@@ -310,17 +339,18 @@ input::placeholder {
 }
 
 .hebergements-container {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    justify-content:space-between;
+    justify-content: space-between;
 
 }
 
-.hebergements-title {
+.hebergements h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin:0;
 }
 
 .hebergements-container a {
@@ -333,7 +363,7 @@ input::placeholder {
     height: 124px;
     gap: 0px;
     border-radius: 20px 20px 0px 0px;
-    opacity: 0px;
+    opacity: 1;
     object-fit: cover;
 }
 
@@ -360,8 +390,10 @@ input::placeholder {
 }
 
 .afficher-plus {
-    margin-top: 30px; /* Ajustez cette valeur selon vos besoins */
-    align-self: flex-start; /* Aligne le lien à gauche */
+    margin-top: 30px;
+    /* Ajustez cette valeur selon vos besoins */
+    align-self: flex-start;
+    /* Aligne le lien à gauche */
 }
 
 
@@ -416,8 +448,8 @@ input::placeholder {
 }
 
 .activites-cards {
-    display:flex;
-    justify-content:space-between;
+    display: flex;
+    justify-content: space-between;
     gap: 20px;
 }
 
@@ -426,14 +458,17 @@ input::placeholder {
 }
 
 .activites-cards .card {
-    width: 100%; /* La carte prend toute la largeur du lien parent */
+    width: 100%;
+    /* La carte prend toute la largeur du lien parent */
     height: 439px;
     padding: 0px;
     display: flex;
     flex-direction: column;
     border-radius: 20px;
-    overflow: hidden; /* Pour s'assurer que l'image ne dépasse pas */
-    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Ajoute une ombre légère */
+    overflow: hidden;
+    /* Pour s'assurer que l'image ne dépasse pas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Ajoute une ombre légère */
     flex-grow: 1;
 }
 
@@ -451,8 +486,8 @@ input::placeholder {
     max-height: 380px;
     gap: 0px;
     border-radius: 20px 20px 0px 0px;
-    border: 5px 0px 0px 0px;
-    opacity: 1px;
+    border: 5px 0;
+    opacity: 1;
     object-fit: cover;
 }
 
@@ -460,14 +495,15 @@ input::placeholder {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centre verticalement le titre */
-    padding-left: 10px; 
+    justify-content: center;
+    /* Centre verticalement le titre */
+    padding-left: 10px;
 }
 
 .activites-cards .card-title {
     margin-top: 10px;
     margin-bottom: 10px;
-    
+
 }
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -478,12 +514,12 @@ input::placeholder {
     .hebergements-and-populaires {
         flex-direction: column;
     }
-    
+
     .filtres {
         flex-wrap: wrap;
         gap: 10px;
     }
-    
+
     .bouton-filtres {
         font-size: 16px;
         padding: 4px 15px;
@@ -523,26 +559,112 @@ input::placeholder {
         padding: 0;
     }
 
+    body {
+        margin: 0px;
+    }
+
+    nav {
+        width: 100%;
+    }
+
     header {
         flex-direction: column;
         align-items: center;
+        margin-bottom: 50px;
     }
 
-    .accueil-entete {
-        width: 100%;
-        justify-content: space-around;
+    .header-nav {
+        gap:0;
     }
 
     .Buttonheader {
         border-top: none;
-        border-bottom: 3px solid transparent;
+        border-bottom: 2px solid #F2F2F2;
         width: 50%;
+        padding: 15px;
+        margin-left:0px;
+        text-align: center;
+        font-size: 16px;
     }
 
-    .Buttonheader:hover, .Buttonheader:focus {
+    .Buttonheader:hover,
+    .Buttonheader:focus {
         border-top: none;
-        border-bottom: 3px solid #0065FC;
+        border-bottom: 2px solid #0065FC;
     }
+
+    main {
+        margin: 0px 20px;
+    }
+
+    .debutdepage {
+        gap:35px;
+    }
+
+    .titre h1 {
+        margin-top:35px;
+    }
+
+    .titre h1 .pour {
+        display:inline-block;
+        width:100%;
+    }
+
+    .titre {
+        margin-bottom: 35px;
+    }
+
+    .search-container {
+        position: relative;
+        width: 100%;
+        height: 49px;
+        display: flex;
+        align-items: center;
+        padding-top: 35px;
+    }
+
+    .search-bar {
+        flex-grow: 1;
+        height: 47px;
+        width: 100%;
+        border: 1px solid #F2F2F2;
+        border-right: none;
+        border-radius: 0 15px 15px 0;
+        text-align: center;
+        text-indent: -24px; /* La moitié de la largeur du bouton de recherche */
+        padding-right: 49px; /* Espace pour le bouton de recherche */
+    }
+
+    .search-bar::placeholder {
+        text-align: center;
+    }
+    
+    .boutonrecherche {
+        position: absolute;
+        right: 0;
+        width: 49px;
+        height: 49px;
+        font-size: 0;
+        border-radius: 15px;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .icon {
+        width: 50px;
+        flex-shrink: 0;
+        height: 49px;
+        border: 1px solid #F2F2F2;
+        border-right: none;
+        border-radius: 15px 0 0 15px;
+    }
+
+    .boutonrecherche::before {
+        content: "\f002"; /* Icône de loupe */
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 16px;
+    }
+    
 
     .filtres {
         flex-direction: column;
@@ -562,9 +684,14 @@ input::placeholder {
         justify-content: flex-start;
     }
 
+    .p1 .dans {
+        display:inline-block;
+        width:100%;
+    }
 
     .hebergements-and-populaires {
         flex-direction: column-reverse;
+        margin-top: 0;
     }
 
     .hebergements {
@@ -573,6 +700,7 @@ input::placeholder {
 
     .populaires {
         border-radius: 0;
+        margin-top:0;
     }
 
     .populaires-cards {
@@ -605,6 +733,23 @@ input::placeholder {
 }
 
 @media (min-width: 1025px) {
+    .boutonrecherche {
+        flex-shrink: 0;
+    }
+    
+    .icon {
+        flex-shrink: 0;
+    }
+
+    .search-container {
+        width: 377px;
+    }
+
+    .search-bar {
+        width: 195px;
+        height: 45px;
+    }
+
     .hebergements-and-populaires {
         flex-direction: row;
     }
@@ -625,4 +770,7 @@ input::placeholder {
     .populaires-cards a {
         width: 100%;
     }
+
+  
 }
+	
