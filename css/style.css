@@ -123,12 +123,12 @@ html {
 
 .Buttonheader[href*="Hébergements"] {
     width: 113px;
-    /* Ajustez cette valeur pour correspondre à la largeur du mot "Activités" */
+    /* la largeur du mot */
 }
 
 .Buttonheader[href*="Activités"] {
     width: 63px;
-    /* Ajustez cette valeur pour correspondre à la largeur du mot "Activités" */
+    /* la largeur du mot "Activités" */
 }
 
 .debutdepage {
@@ -185,7 +185,7 @@ input::placeholder {
     border-right: none;
     font-weight: bold;
     text-align: center;
-    flex-grow: 1; /* Pour que la barre de recherche prenne l'espace disponible */
+    flex-grow: 1; /*  prend l'espace disponible */
 }
 
 .boutonrecherche {
@@ -330,7 +330,7 @@ input::placeholder {
     background-color: var(--main-bg-color);
     border-radius: 20px;
     padding: 30px;
-    box-sizing: border-box;
+    box-sizing: border-box; /*inclut le padding dans la largeur totale du contenu*/
 }
 
 /****** Hebergements ***********/
@@ -391,7 +391,6 @@ input::placeholder {
 
 .afficher-plus {
     margin-top: 30px;
-    /* Ajustez cette valeur selon vos besoins */
     align-self: flex-start;
     /* Aligne le lien à gauche */
 }
@@ -469,7 +468,7 @@ input::placeholder {
     /* Pour s'assurer que l'image ne dépasse pas */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     /* Ajoute une ombre légère */
-    flex-grow: 1;
+    flex-grow: 1; /* permet de s'étendre et d'occuper l'espace disponible*/
 }
 
 .activites-title {
@@ -603,11 +602,6 @@ input::placeholder {
 
     .titre h1 {
         margin-top:35px;
-    }
-
-    .titre h1 .pour {
-        display:inline-block;
-        width:100%;
     }
 
     .titre {
